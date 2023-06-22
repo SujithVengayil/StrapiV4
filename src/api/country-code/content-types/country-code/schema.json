@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "country_codes",
+  "info": {
+    "singularName": "country-code",
+    "pluralName": "country-codes",
+    "displayName": "Country Code"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "dial_code": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

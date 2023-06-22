@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domains",
+  "info": {
+    "singularName": "domain",
+    "pluralName": "domains",
+    "displayName": "Domain",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "matcher": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rules": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "enableAssociatesPortal": {
+      "type": "boolean"
+    },
+    "assetTypesSupported": {
+      "type": "enumeration",
+      "enum": [
+        "couponsAndCollectibles",
+        "coupons",
+        "collectibles"
+      ]
+    },
+    "leftFooterImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rightFooterImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "xsollaPaystationUrl": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "transferCouponMessages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.transfer-coupon-messages"
+    },
+    "transferCollectibleMessages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.transfer-collectible-messages"
+    },
+    "redemptionInstructions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "receiptMessage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    }
+  }
+}

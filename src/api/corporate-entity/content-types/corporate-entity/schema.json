@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "corporate_entities",
+  "info": {
+    "singularName": "corporate-entity",
+    "pluralName": "corporate-entities",
+    "displayName": "Corporate Entity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lookupName": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain",
+      "mappedBy": "corporateEntity"
+    }
+  }
+}

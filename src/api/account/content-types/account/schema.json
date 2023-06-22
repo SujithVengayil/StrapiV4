@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "Account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mobile_wallet_id_number": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Suspended"
+      ]
+    },
+    "physical_card_number": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Suspended"
+      ]
+    },
+    "virtual_card_number": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Suspended"
+      ]
+    },
+    "campaign_balance": {
+      "type": "string"
+    },
+    "account_balance": {
+      "type": "string"
+    },
+    "last_4_EIN": {
+      "type": "string"
+    },
+    "notification_methods": {
+      "type": "enumeration",
+      "enum": [
+        "SMS",
+        "Email"
+      ]
+    },
+    "transaction_history": {
+      "type": "string"
+    }    
+  }
+}

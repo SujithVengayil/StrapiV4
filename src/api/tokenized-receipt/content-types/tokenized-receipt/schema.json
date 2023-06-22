@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokenized_receipts",
+  "info": {
+    "singularName": "tokenized-receipt",
+    "pluralName": "tokenized-receipts",
+    "displayName": "Tokenized Receipt"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "short_name": {
+      "type": "string"
+    },
+    "gft_explorer_link": {
+      "type": "string"
+    },
+    "vimeo_video_id": {
+      "type": "biginteger"
+    },
+    "receipt_id": {
+      "type": "biginteger"
+    },
+    "terms_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.terms-list"
+    },
+    "allowed_country_codes": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country-code.country-code"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "default_back_image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.image-collection"
+    }
+  }
+}

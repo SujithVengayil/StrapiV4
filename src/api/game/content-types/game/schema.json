@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "Game"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "beginDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "couponPrize": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prize.coupon-prize"
+    },
+    "collectiblePrize": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prize.collectible-prize"
+    },
+    "gameId": {
+      "type": "string"
+    },
+    "maxDailyPlays": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "gameServerUrl": {
+      "type": "string"
+    },
+    "bannerArtworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "chain": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chain.chain",
+      "inversedBy": "games"
+    },
+    "gameText": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.game-text",
+      "required": true
+    },
+    "officialRulesLink": {
+      "type": "string",
+      "required": true
+    },
+    "featuredOrder": {
+      "type": "integer"
+    }
+  }
+}

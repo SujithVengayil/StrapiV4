@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_translation_terms_conditions",
+  "info": {
+    "displayName": "TermsCondition",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "string"
+    },
+    "language_code": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::language-code.language-code"
+    },
+    "featured_order": {
+      "type": "integer"
+    }
+  }
+}

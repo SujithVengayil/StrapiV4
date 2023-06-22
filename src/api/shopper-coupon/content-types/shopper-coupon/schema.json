@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopper_coupons",
+  "info": {
+    "singularName": "shopper-coupon",
+    "pluralName": "shopper-coupons",
+    "displayName": "Shopper Coupon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vatom_user_id": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "vatom_business_id": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "vatom_campaign_id": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "vatom_design_id": {
+      "type": "string",
+      "required": true,
+      "minLength": 4
+    },
+    "vatom_distribution_id": {
+      "type": "string",
+      "required": false,
+      "minLength": 4
+    },
+    "vatom_token_id": {
+      "type": "string",
+      "required": true,
+      "minLength": 4,
+      "unique": true
+    },
+    "vatom_source": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "vatom_medium": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "vatom_state": {
+      "type": "enumeration",
+      "enum": [
+        "Minted",
+        "Transferred",
+        "Redeemed"
+      ],
+      "required": false
+    },
+    "shopper_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopper.shopper"
+    }
+  }
+}

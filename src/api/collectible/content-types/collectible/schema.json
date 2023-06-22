@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collectibles",
+  "info": {
+    "singularName": "collectible",
+    "pluralName": "collectibles",
+    "displayName": "Collectible",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collectibleId": {
+      "type": "string",
+      "unique": true
+    },
+    "onDisplayInPWA": {
+      "type": "boolean"
+    },
+    "unlimitedSupply": {
+      "type": "boolean"
+    },
+    "totalMinted": {
+      "type": "biginteger"
+    },
+    "disableLoadToWalletByUser": {
+      "type": "boolean"
+    },
+    "is3DAsset": {
+      "type": "boolean"
+    },
+    "asset3dBackgroundColor": {
+      "type": "string"
+    },
+    "supply": {
+      "type": "integer"
+    },
+    "descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation",
+      "required": true,
+      "min": 1
+    },
+    "vimeoVideoId": {
+      "type": "string"
+    },
+    "target3dAsset": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "target3dMtl": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "asset3dProps": {
+      "type": "json"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain"
+    },
+    "allowedCountryCodes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country-code.country-code"
+    },
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "primaryArtworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork",
+      "required": true,
+      "min": 1
+    },
+    "secondaryArtworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "termsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation",
+      "required": true,
+      "min": 1
+    }
+  }
+}

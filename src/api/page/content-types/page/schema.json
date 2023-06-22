@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageName": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain"
+    },
+    "banners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-management.banners"
+    },
+    "headers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-management.header"
+    },
+    "tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-management.tile"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "store-management.button"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "importconfigs",
+  "info": {
+    "singularName": "importconfig",
+    "pluralName": "importconfigs",
+    "displayName": "Importconfig",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "source": {
+      "type": "string"
+    },
+    "contentType": {
+      "type": "string"
+    },
+    "importedCount": {
+      "type": "integer"
+    },
+    "ongoing": {
+      "type": "boolean"
+    },
+    "options": {
+      "type": "json"
+    },
+    "fieldMapping": {
+      "type": "json"
+    }
+  }
+}

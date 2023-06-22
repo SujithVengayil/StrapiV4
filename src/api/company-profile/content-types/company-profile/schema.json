@@ -1,0 +1,108 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_profiles",
+  "info": {
+    "singularName": "company-profile",
+    "pluralName": "company-profiles",
+    "displayName": "Company Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "lookup_name": {
+      "type": "string",
+      "required": true
+    },
+    "company_EIN_TIN": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "unique": true
+    },
+    "company_parent": {
+      "type": "string"
+    },
+    "company_parent_EIN_TIN": {
+      "type": "string"
+    },
+    "company_alliance_id": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "contact_mobile": {
+      "type": "string",
+      "required": true,
+      "minLength": 8
+    },
+    "contact_email": {
+      "type": "email",
+      "required": true,
+      "minLength": 3
+    },
+    "password": {
+      "type": "password"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "role": {
+      "type": "string"
+    },
+    "address_street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "gft_explorer_link": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "node": {
+      "type": "string"
+    },
+    "id_number": {
+      "type": "uid"
+    },
+    "gft_pays": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gft-pay.gft-pay"
+    },
+    "accounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::account.account"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country-code.country-code"
+    }
+  }
+}

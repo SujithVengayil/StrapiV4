@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_art_artworks",
+  "info": {
+    "displayName": "Artwork",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "artwork": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language-code.language-code"
+    }
+  }
+}

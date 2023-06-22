@@ -1,0 +1,215 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "singularName": "campaign",
+    "pluralName": "campaigns",
+    "displayName": "Campaign",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaignId": {
+      "type": "string",
+      "unique": true
+    },
+    "couponValue": {
+      "type": "decimal",
+      "required": true
+    },
+    "beginDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "isBasket": {
+      "type": "boolean"
+    },
+    "isRebate": {
+      "type": "boolean",
+      "default": false
+    },
+    "basketValue": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "isMultiple": {
+      "type": "boolean"
+    },
+    "updateLevel": {
+      "type": "integer",
+      "default": 0
+    },
+    "couponSupply": {
+      "type": "biginteger",
+      "required": true
+    },
+    "additionalRulesLink": {
+      "type": "string",
+      "default": "https://www.food4less.com/"
+    },
+    "listId": {
+      "type": "string"
+    },
+    "listItems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "campaigns"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "coupon"
+      ],
+      "default": "coupon"
+    },
+    "loyaltyPoints": {
+      "type": "biginteger"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "default": "draft"
+    },
+    "couponType": {
+      "type": "enumeration",
+      "enum": [
+        "manufacturer",
+        "store"
+      ],
+      "default": "manufacturer"
+    },
+    "totalRedeemed": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "totalLoaded": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "totalAvailable": {
+      "type": "biginteger"
+    },
+    "previewLink": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain"
+    },
+    "corporateEntities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::corporate-entity.corporate-entity"
+    },
+    "regions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::region.region"
+    },
+    "stores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::store.store"
+    },
+    "shortId": {
+      "type": "string"
+    },
+    "primaryArtworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork",
+      "required": true,
+      "min": 1
+    },
+    "bannerArtworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation",
+      "required": true,
+      "min": 1
+    },
+    "termsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation",
+      "required": true,
+      "min": 1
+    },
+    "storeTerminalDescriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation",
+      "required": true,
+      "min": 1
+    },
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "backArtwork": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork",
+      "required": true,
+      "min": 1
+    },
+    "featuredOrder": {
+      "type": "integer"
+    },
+    "dealsOrder": {
+      "type": "integer"
+    },
+    "passiveRedemption": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "new_users",
+        "new_and_existing_users"
+      ],
+      "default": "none"
+    },
+    "collectiblesToLoad": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collectible.collectible"
+    },
+    "campaignsToLoad": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::campaign.campaign"
+    },
+    "onDisplayInPWA": {
+      "type": "boolean",
+      "default": true
+    },
+    "redeemButtonOnReward": {
+      "type": "boolean",
+      "default": false
+    },
+    "disableLoadToWalletByUser": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

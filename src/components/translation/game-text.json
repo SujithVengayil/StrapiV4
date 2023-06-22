@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_translation_game_texts",
+  "info": {
+    "displayName": "GameText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language-code.language-code"
+    }
+  }
+}

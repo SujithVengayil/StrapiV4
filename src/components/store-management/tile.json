@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_store_management_tiles",
+  "info": {
+    "displayName": "Tile",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pageOrder": {
+      "type": "integer"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "artworkList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "externalLink": {
+      "type": "string"
+    },
+    "internalLink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

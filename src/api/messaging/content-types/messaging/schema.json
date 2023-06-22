@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messagings",
+  "info": {
+    "singularName": "messaging",
+    "pluralName": "messagings",
+    "displayName": "Messaging"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "social_link": {
+      "type": "string"
+    },
+    "text_message": {
+      "type": "string"
+    },
+    "email_message": {
+      "type": "string"
+    },
+    "blog_link": {
+      "type": "string"
+    }
+  }
+}

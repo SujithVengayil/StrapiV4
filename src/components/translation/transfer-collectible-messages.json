@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_translation_transfer_collectible_messages",
+  "info": {
+    "displayName": "TransferCollectibleMessages",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "string"
+    }
+  }
+}

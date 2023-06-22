@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chains",
+  "info": {
+    "singularName": "chain",
+    "pluralName": "chains",
+    "displayName": "Chain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "banners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::banner.banner",
+      "mappedBy": "chains"
+    },
+    "reward_games": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reward-game.reward-game",
+      "mappedBy": "chain"
+    },
+    "regions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::region.region",
+      "mappedBy": "chain"
+    },
+    "corporateEntity": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::corporate-entity.corporate-entity",
+      "inversedBy": "chains"
+    },
+    "games": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::game.game",
+      "mappedBy": "chain"
+    }
+  }
+}

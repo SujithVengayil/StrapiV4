@@ -1,0 +1,161 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "singularName": "coupon",
+    "pluralName": "coupons",
+    "displayName": "Coupon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reward_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 5
+    },
+    "pos_campaign_id": {
+      "type": "biginteger",
+      "required": true,
+      "min": "5"
+    },
+    "status": {
+      "type": "string"
+    },
+    "preview_link": {
+      "type": "string"
+    },
+    "on_display_in_pwa": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "reward_type": {
+      "type": "string"
+    },
+    "begin_date": {
+      "type": "date",
+      "required": true
+    },
+    "end_date": {
+      "type": "date",
+      "required": true
+    },
+    "passive_redemption": {
+      "type": "string"
+    },
+    "front_of_reward_artwork": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "back_of_reward_artwork": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 10
+    },
+    "disclaimer": {
+      "type": "richtext",
+      "required": true
+    },
+    "additional_terms_link": {
+      "type": "string"
+    },
+    "receipt_description": {
+      "type": "string",
+      "required": true
+    },
+    "reward_supply": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "reward_value": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "total_products": {
+      "type": "integer",
+      "required": true
+    },
+    "basket_reward": {
+      "type": "boolean",
+      "default": true
+    },
+    "basket_value": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "short_id": {
+      "type": "string"
+    },
+    "total_available": {
+      "type": "integer"
+    },
+    "total_loaded": {
+      "type": "integer"
+    },
+    "total_redeemed": {
+      "type": "integer"
+    },
+    "featured_order": {
+      "type": "string"
+    },
+    "deals_order": {
+      "type": "string"
+    },
+    "redeem_button_on_reward": {
+      "type": "boolean"
+    },
+    "disable_load_to_wallet_by_user": {
+      "type": "boolean"
+    },
+    "is_rebate": {
+      "type": "boolean"
+    },
+    "included_products": {
+      "type": "string"
+    },
+    "corporate_entity": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "string"
+    },
+    "regions": {
+      "type": "string"
+    },
+    "stores": {
+      "type": "string"
+    },
+    "collectibles_to_load": {
+      "type": "string"
+    },
+    "campaigns_to_load": {
+      "type": "string"
+    },
+    "gft_explorer_link": {
+      "type": "string"
+    },
+    "banner_artwork": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "language_codes",
+  "info": {
+    "singularName": "language-code",
+    "pluralName": "language-codes",
+    "displayName": "Language Code",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "languageName": {
+      "type": "string"
+    }
+  }
+}

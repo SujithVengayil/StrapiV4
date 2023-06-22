@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_store_management_videos",
+  "info": {
+    "displayName": "Video"
+  },
+  "options": {},
+  "attributes": {
+    "pageOrder": {
+      "type": "integer"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "iframeEmbed": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    }
+  }
+}

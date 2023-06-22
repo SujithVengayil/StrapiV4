@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artwork": {
+      "displayName": "Artwork",
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "featuredOrder": {
+      "type": "integer"
+    },
+    "externalLink": {
+      "type": "string"
+    },
+    "bannerId": {
+      "type": "string"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::chain.chain",
+      "inversedBy": "banners"
+    }
+  }
+}

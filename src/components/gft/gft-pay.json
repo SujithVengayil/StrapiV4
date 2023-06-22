@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_gft_gft_pays",
+  "info": {
+    "displayName": "GFT Pay",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "balance_greater_than_1000": {
+      "type": "boolean"
+    },
+    "date_of_birth": {
+      "type": "date"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "middle_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "corporate_email": {
+      "type": "email"
+    },
+    "corporate_address_1": {
+      "type": "string"
+    },
+    "corporate_address_2": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "display_currency": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "boolean"
+    }
+  }
+}

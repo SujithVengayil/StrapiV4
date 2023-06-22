@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_store_management_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "pageOrder": {
+      "type": "integer"
+    },
+    "externalLink": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "internalLink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "buttonText": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    }
+  }
+}

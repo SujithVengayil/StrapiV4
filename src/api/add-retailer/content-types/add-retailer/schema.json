@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add_retailers",
+  "info": {
+    "singularName": "add-retailer",
+    "pluralName": "add-retailers",
+    "displayName": "Add Retailer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "short_id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "restricted_loyalty_program": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

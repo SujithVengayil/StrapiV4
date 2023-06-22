@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reward_subscriptions",
+  "info": {
+    "singularName": "reward-subscription",
+    "pluralName": "reward-subscriptions",
+    "displayName": "Reward Subscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subscription_id": {
+      "type": "string"
+    },
+    "short_name": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "more_link_info": {
+      "type": "string"
+    },
+    "billing_id": {
+      "type": "string"
+    },
+    "x_solla_api_latest_status": {
+      "type": "boolean"
+    },
+    "x_solla_product_id": {
+      "type": "integer"
+    },
+    "gft_explorer_link": {
+      "type": "string"
+    },
+    "live": {
+      "type": "boolean"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "Euro",
+        "Dollar"
+      ]
+    },
+    "drop_frequency": {
+      "type": "enumeration",
+      "enum": [
+        "true"
+      ]
+    },
+    "allowed_country_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country-code.country-code"
+    },
+    "regions": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "subscription_drops": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription-drop.subscription-drop",
+      "mappedBy": "subscription"
+    },
+    "terms_conditions": {
+      "type": "string"
+    },
+    "promotional_images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.image-collection"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "feature_order": {
+      "type": "integer"
+    },
+    "primary_display_image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    }
+  }
+}

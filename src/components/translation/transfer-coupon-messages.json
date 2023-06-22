@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_translation_transfered_coupon_messages",
+  "info": {
+    "displayName": "TransferCouponMessages"
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "string"
+    }
+  }
+}

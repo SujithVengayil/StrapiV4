@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adc_drops",
+  "info": {
+    "singularName": "adc-drop",
+    "pluralName": "adc-drops",
+    "displayName": "ADC Drop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dropTimestamp": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "string"
+    },
+    "result": {
+      "type": "json"
+    },
+    "adcDropId": {
+      "type": "string"
+    },
+    "partner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::partner.partner"
+    },
+    "collectibles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collectible.collectible"
+    },
+    "GftExplorerLink": {
+      "type": "string"
+    }
+  }
+}

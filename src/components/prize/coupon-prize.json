@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_prize_coupon_prizes",
+  "info": {
+    "displayName": "CouponPrize",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "prize.prize-detail",
+      "required": true
+    }
+  }
+}

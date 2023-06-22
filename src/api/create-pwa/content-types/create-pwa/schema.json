@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "create_pwas",
+  "info": {
+    "singularName": "create-pwa",
+    "pluralName": "create-pwas",
+    "displayName": "Create PWA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "matcher": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "rules": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "enable_associates_portal": {
+      "type": "string"
+    },
+    "asset_types_supported": {
+      "type": "string"
+    },
+    "xsolla_paystation_url": {
+      "type": "string"
+    },
+    "transfer_receipt_messages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "transfer_reward_messages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "redemption_instructions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "receipt_message": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "left_footer_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "right_footer_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

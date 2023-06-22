@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_store_management_banners",
+  "info": {
+    "displayName": "Banners",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pageOrder": {
+      "type": "integer",
+      "required": true
+    },
+    "visible": {
+      "type": "boolean",
+      "default": false
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "entries": {
+      "displayName": "bannerArtwork",
+      "type": "component",
+      "repeatable": true,
+      "component": "store-management.banner-artwork"
+    }
+  }
+}

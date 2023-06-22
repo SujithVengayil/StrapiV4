@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_art_image_collections",
+  "info": {
+    "displayName": "ImageCollection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "imageCollection": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language-code.language-code"
+    }
+  }
+}

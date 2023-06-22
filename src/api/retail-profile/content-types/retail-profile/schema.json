@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "retail_profiles",
+  "info": {
+    "singularName": "retail-profile",
+    "pluralName": "retail-profiles",
+    "displayName": "Retail Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "regions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::region.region"
+    },
+    "division": {
+      "type": "integer"
+    }
+  }
+}

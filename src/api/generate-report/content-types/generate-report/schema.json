@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "generate_reports",
+  "info": {
+    "singularName": "generate-report",
+    "pluralName": "generate-reports",
+    "displayName": "Generate Report",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "report_type_summary": {
+      "type": "string"
+    },
+    "receipt_mints": {
+      "type": "string"
+    },
+    "rewards_tranfers": {
+      "type": "string"
+    },
+    "receipt_transfers": {
+      "type": "string"
+    },
+    "rewards_mints": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "domain_specific_reports": {
+      "type": "string"
+    },
+    "generate_report": {
+      "type": "string"
+    }
+  }
+}

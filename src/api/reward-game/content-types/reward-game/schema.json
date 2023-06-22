@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reward_games",
+  "info": {
+    "singularName": "reward-game",
+    "pluralName": "reward-games",
+    "displayName": "Reward Game",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game_name": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "string"
+    },
+    "game_id": {
+      "type": "integer"
+    },
+    "max_daily_plays": {
+      "type": "integer"
+    },
+    "begin_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "game_server_url": {
+      "type": "string"
+    },
+    "official_rules_link": {
+      "type": "string"
+    },
+    "feature_order": {
+      "type": "string"
+    },
+    "gft_explorer_link": {
+      "type": "string"
+    },
+    "banner_artwork_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork"
+    },
+    "coupon_prize": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prize.coupon-prize"
+    },
+    "game_text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.game-text"
+    },
+    "chain": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chain.chain",
+      "inversedBy": "reward_games"
+    }
+  }
+}

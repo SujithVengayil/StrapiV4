@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "associates",
+  "info": {
+    "singularName": "associate",
+    "pluralName": "associates",
+    "displayName": "Associate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "associate_id": {
+      "type": "integer"
+    }
+  }
+}

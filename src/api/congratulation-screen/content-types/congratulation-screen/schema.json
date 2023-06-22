@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "congratulation_screens",
+  "info": {
+    "singularName": "congratulation-screen",
+    "pluralName": "congratulation-screens",
+    "displayName": "Congratulation Screens",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "congratulationsImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "congratulationTitle": {
+      "type": "string"
+    },
+    "howToTitle": {
+      "type": "string"
+    },
+    "howToText": {
+      "type": "string"
+    },
+    "congratulationsText": {
+      "type": "string"
+    },
+    "howToImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "partners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner.partner",
+      "mappedBy": "congratulationScreen"
+    }
+  }
+}

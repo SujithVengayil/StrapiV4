@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_prize_collectible_prizes",
+  "info": {
+    "displayName": "CollectiblePrize",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "collectible": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::collectible.collectible"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "prize.prize-detail",
+      "required": true
+    }
+  }
+}

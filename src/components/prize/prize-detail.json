@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_prize_prize_details",
+  "info": {
+    "displayName": "PrizeDetail"
+  },
+  "options": {},
+  "attributes": {
+    "prizeSupply": {
+      "type": "integer",
+      "required": true
+    },
+    "winAfter": {
+      "type": "datetime"
+    },
+    "winningPrize": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "prizesAvailable": {
+      "type": "integer"
+    },
+    "maxWinsPerDay": {
+      "type": "integer",
+      "required": true,
+      "default": 3
+    },
+    "winInterval": {
+      "type": "decimal",
+      "default": 6
+    },
+    "waitAfterWin": {
+      "type": "decimal",
+      "default": 1
+    },
+    "prizeId": {
+      "type": "string"
+    }
+  }
+}

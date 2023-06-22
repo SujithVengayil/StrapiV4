@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscription_drops",
+  "info": {
+    "singularName": "subscription-drop",
+    "pluralName": "subscription-drops",
+    "displayName": "Subscription Drop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dropTimestamp": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "result": {
+      "type": "json"
+    },
+    "subscription": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subscription.subscription",
+      "inversedBy": "subscription_drops"
+    },
+    "subscriptionDropId": {
+      "type": "string"
+    },
+    "collectibles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collectible.collectible"
+    },
+    "GftExplorerLink": {
+      "type": "string"
+    },
+    "rewards": {
+      "type": "string"
+    }
+  }
+}

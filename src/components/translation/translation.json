@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_translation_translations",
+  "info": {
+    "displayName": "Translation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "string",
+      "required": true
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language-code.language-code"
+    }
+  }
+}

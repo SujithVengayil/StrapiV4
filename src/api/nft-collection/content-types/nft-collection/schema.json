@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nft_collections",
+  "info": {
+    "singularName": "nft-collection",
+    "pluralName": "nft-collections",
+    "displayName": "NFT Collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "supply": {
+      "type": "integer",
+      "default": 1
+    },
+    "termsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.terms-list"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "translation.translation"
+    },
+    "totalMinted": {
+      "type": "integer"
+    },
+    "vimeoVideoId": {
+      "type": "string"
+    },
+    "defaultBackImage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "art.artwork",
+      "min": 1
+    },
+    "nftCollectionId": {
+      "type": "string"
+    },
+    "allowedCountryCodes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country-code.country-code"
+    },
+    "chains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::chain.chain"
+    },
+    "GftExplorerLink": {
+      "type": "string"
+    }
+  }
+}
